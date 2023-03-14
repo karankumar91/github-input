@@ -26,4 +26,3 @@ jobs:
         run: |
           cd main
           python python.py 20 30 
-      
