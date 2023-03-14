@@ -1,0 +1,29 @@
+name: karan
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run a one-line script
+        run: echo Hello, world!
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo this is karan echo,
+          echo test, and deploy your project.
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10' 
+      - name: success message
+        run: |
+          cd main
+          python python.py 20 30 
+      
